@@ -54,10 +54,10 @@
                 <div class="collapse navbar-collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item"><a class="nav-link" runat="server" href="~/Default.aspx">Buscar Baños</a></li> <!-- Enlace a la página principal de búsqueda -->
+                        <li class="nav-item"><a class="nav-link" runat="server" href="~/Agregar.aspx">Agregar Baño</a></li>
                         <li class="nav-item"><a class="nav-link" runat="server" href="~/Mapa.aspx">Mapa</a></li> <!-- Página para mapa (crea esta página después) -->
                         <li class="nav-item"><a class="nav-link" runat="server" href="~/Perfil.aspx">Perfil</a></li> <!-- Para usuarios registrados -->
                         <li class="nav-item"><a class="nav-link" runat="server" href="~/About.aspx">Acerca de</a></li>
-                        <li class="nav-item"><a class="nav-link" runat="server" href="~/Contact.aspx">Contacto</a></li>
                     </ul>
                 </div>
             </div>

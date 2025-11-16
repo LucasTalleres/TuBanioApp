@@ -27,15 +27,14 @@ namespace C2_BLL
         }
         public void AgregarBaño(Baño nuevo)
         {
-            if (nuevo == null)
+            if (nuevo != null)  // Cambia a != null para agregar cuando HAY un objeto
             {
                 conexion.Agregar(nuevo);
             }
             else
             {
-                mensaje.Append("Error al agregar el baño");
+                mensaje.Append("Error al agregar el baño: objeto nulo");
             }
-
         }
         public void ModificarBaño(Baño modificado)
         {

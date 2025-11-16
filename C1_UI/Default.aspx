@@ -28,7 +28,8 @@
                                 <asp:DropDownList ID="ddlTipo" runat="server" CssClass="form-select">
                                     <asp:ListItem Text="Todos" Value="todos"></asp:ListItem>
                                     <asp:ListItem Text="Público" Value="publico"></asp:ListItem>
-                                    <asp:ListItem Text="Accesible" Value="accesible"></asp:ListItem>
+                                    <asp:ListItem Text="Compra Minima" Value="compraMin"></asp:ListItem>
+                                    <asp:ListItem Text="Para Discapacitado" Value="discapacitado"></asp:ListItem>
                                     <asp:ListItem Text="Con Cambiador" Value="cambiador"></asp:ListItem>
                                 </asp:DropDownList>
                             </div>
@@ -45,11 +46,11 @@
                         <div class="row g-3 mt-2">
                             <div class="col-12">
                                 <div class="form-check">
-                                    <asp:CheckBox ID="chkAccesible" runat="server" CssClass="form-check-input" />
+                                    <asp:CheckBox ID="chkAccesible" runat="server" />
                                     <label class="form-check-label" for="chkAccesible">Solo baños accesibles para discapacitados</label>
                                 </div>
                                 <div class="form-check">
-                                    <asp:CheckBox ID="chkAbierto" runat="server" CssClass="form-check-input" />
+                                    <asp:CheckBox ID="chkAbierto" runat="server" />
                                     <label class="form-check-label" for="chkAbierto">Solo baños abiertos ahora</label>
                                 </div>
                             </div>
@@ -66,20 +67,48 @@
         <div class="row">
             <div class="col-12">
                 <h2 class="h4 mb-3">Resultados de Búsqueda</h2>
-                <asp:GridView ID="gvResultados" runat="server" AutoGenerateColumns="False" CssClass="table table-striped table-hover" EmptyDataText="No se encontraron baños que coincidan con tu búsqueda.">
-                    <Columns>
-                        <asp:BoundField DataField="Nombre" HeaderText="Nombre" />
-                        <asp:BoundField DataField="Ubicacion" HeaderText="Ubicación" />
-                        <asp:BoundField DataField="Tipo" HeaderText="Tipo" />
-                        <asp:BoundField DataField="Distancia" HeaderText="Distancia (km)" DataFormatString="{0:F1}" />
-                        <asp:BoundField DataField="Horario" HeaderText="Horario" />
-                        <asp:TemplateField HeaderText="Acciones">
-                            <ItemTemplate>
-                                <a href='<%# "Detalle.aspx?id=" + Eval("ID") %>' class="btn btn-sm btn-outline-primary">Ver Detalles</a>
-                            </ItemTemplate>
-                        </asp:TemplateField>
-                    </Columns>
-                </asp:GridView>
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <asp:Label ID="Label1" runat="server" CssClass="text-success" Visible="false"></asp:Label>
+                        <asp:GridView ID="gvResultados" runat="server" CssClass="table table-striped w-100 grid-sin-corte" AutoGenerateColumns="false" Visible="false">
+                            <Columns>
+                                <asp:BoundField DataField="Calle" HeaderText="Calle" ItemStyle-Width="20%" />
+                                <asp:BoundField DataField="Numeracion" HeaderText="Numeración" ItemStyle-Width="10%" ItemStyle-HorizontalAlign="Center" />
+                                <asp:BoundField DataField="Nombre" HeaderText="Nombre" ItemStyle-Width="20%" />
+                                <asp:BoundField DataField="Descripcion" HeaderText="Descripción" ItemStyle-Width="50%" />
+                                <asp:TemplateField HeaderText="Gratuito" ItemStyle-Width="10%" ItemStyle-HorizontalAlign="Center">
+                                    <ItemTemplate>
+                                        <asp:CheckBox ID="chkGratuito" runat="server" Enabled="false" Checked='<%# Convert.ToBoolean(Eval("Gratuito")) %>' />
+                                    </ItemTemplate>
+                                </asp:TemplateField>
+
+                                <asp:TemplateField HeaderText="Discapacitado" ItemStyle-Width="10%" ItemStyle-HorizontalAlign="Center">
+                                    <ItemTemplate>
+                                        <asp:CheckBox ID="chkDiscapacitado" runat="server" Enabled="false" Checked='<%# Convert.ToBoolean(Eval("Discapacitado")) %>' />
+                                    </ItemTemplate>
+                                </asp:TemplateField>
+
+                                <asp:TemplateField HeaderText="Cambiador Bebé" ItemStyle-Width="10%" ItemStyle-HorizontalAlign="Center">
+                                    <ItemTemplate>
+                                        <asp:CheckBox ID="chkCambiadorBebe" runat="server" Enabled="false" Checked='<%# Convert.ToBoolean(Eval("CambiadorBebe")) %>' />
+                                    </ItemTemplate>
+                                </asp:TemplateField>
+
+                                <asp:TemplateField HeaderText="Mixto" ItemStyle-Width="10%" ItemStyle-HorizontalAlign="Center">
+                                    <ItemTemplate>
+                                        <asp:CheckBox ID="chkMixto" runat="server" Enabled="false" Checked='<%# Convert.ToBoolean(Eval("Mixto")) %>' />
+                                    </ItemTemplate>
+                                </asp:TemplateField>
+
+                                <asp:TemplateField HeaderText="Ducha" ItemStyle-Width="10%" ItemStyle-HorizontalAlign="Center">
+                                    <ItemTemplate>
+                                        <asp:CheckBox ID="chkDucha" runat="server" Enabled="false" Checked='<%# Convert.ToBoolean(Eval("Ducha")) %>' />
+                                    </ItemTemplate>
+                                </asp:TemplateField>
+                            </Columns>
+                        </asp:GridView>
+                    </div>
+                </div>
                 <!-- Mensaje de error o info -->
                 <asp:Label ID="lblMensaje" runat="server" CssClass="text-danger" Visible="false"></asp:Label>
             </div>
