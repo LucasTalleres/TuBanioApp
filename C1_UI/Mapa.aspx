@@ -3,12 +3,12 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <style>
         .full-screen-container {
-            width: 100vw; /* Ancho completo de la pantalla */
-            height: 100vh; /* Alto completo de la pantalla */
-            position: fixed; /* Fija la imagen en pantalla completa sin afectar el layout */
+            width: 100vw; 
+            height: 100vh;
+            position: fixed;
             top: 0;
             left: 0;
-            z-index: -1; /* Detrás de todo */
+            z-index: -1;
             overflow: hidden;
         }
         .full-screen-image {
@@ -20,7 +20,7 @@
             position: relative;
             z-index: 1;
             padding: 20px;
-            min-height: 100vh; /* Empuja el footer hacia abajo */
+            min-height: 100vh; 
         }
         .center-button-container {
             position: fixed;
@@ -33,10 +33,10 @@
         <asp:Image ID="imgMapa" ImageUrl="~/Images/Mapa-TuBanio.png" AlternateText="Imagen del Mapa" CssClass="full-screen-image" runat="server" />
     </div>
     <div class="content-overlay">
-        <!-- Aquí puedes agregar más contenido encima de la imagen si es necesario -->
+        
         <div class="center-button-container">
             <button type="button" class="btn btn-primary btn-lg" title="Centrar mapa">
-                <i class="bi bi-geo-alt"></i> <!-- Icono de geolocalización para centrar -->
+                <i class="bi bi-geo-alt"></i>
             </button>
         </div>
     </div>

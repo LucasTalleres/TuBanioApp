@@ -85,7 +85,7 @@ namespace C3_DAL
             conexion.ConnectionString = "data source=DESKTOP-C1E04P7; initial catalog=AppTuBanio; integrated security=sspi";
             comando.CommandType = System.Data.CommandType.Text;
 
-            comando.CommandText = "select * from Banio Where Calle like'" + busca + "'";
+            comando.CommandText = "select * from Banio Where Nombre like'" + busca + "'";
             comando.Connection = conexion;
             conexion.Open();
 

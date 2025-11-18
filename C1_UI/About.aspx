@@ -13,12 +13,11 @@
                     <div class="card-body">
                         <h3 class="card-title">¿Qué es Buscador de Baños Públicos?</h3>
                         <p class="card-text">
-                            Esta aplicación web está diseñada para ayudarte a encontrar baños públicos accesibles y limpios en tu ciudad o área cercana. 
-                            Ya sea que estés de viaje, en una emergencia o simplemente explorando, nuestro buscador te permite localizar opciones rápidas y confiables.
+                            Esta aplicación web está diseñada para ayudarte a encontrar baños públicos accesibles y limpios en tu ciudad o area cercana. 
                         </p>
                         <p class="card-text">
-                            Utilizamos datos actualizados para mostrar ubicaciones, tipos de baños (e.g., con accesibilidad para discapacitados, cambiadores para bebés), 
-                            horarios de apertura y reseñas de usuarios. ¡Nunca más te preocupes por dónde ir!
+                            Utilizamos datos actualizados para mostrar ubicaciones, tipos de baños (ej: Con accesibilidad para discapacitados, cambiadores para bebés), 
+                            horarios de apertura y reseñas de usuarios.
                         </p>
                     </div>
                 </div>
@@ -30,7 +29,6 @@
                             <li class="list-group-item"><i class="bi bi-map me-2"></i>Mapa interactivo para visualizar baños cercanos.</li>
                             <li class="list-group-item"><i class="bi bi-star me-2"></i>Reseñas y calificaciones de la comunidad.</li>
                             <li class="list-group-item"><i class="bi bi-phone me-2"></i>Información de contacto y horarios en tiempo real.</li>
-                            <li class="list-group-item"><i class="bi bi-shield-check me-2"></i>Enfoque en privacidad y datos seguros.</li>
                         </ul>
                     </div>
                 </div>
@@ -39,8 +37,8 @@
                 <div class="card shadow-sm mb-4">
                     <div class="card-body text-center">
                         <h4 class="card-title">¿Quieres Contribuir?</h4>
-                        <p class="card-text">Ayúdanos a mejorar agregando reseñas o reportando nuevos baños públicos.</p>
-                        <a href="~/Contact.aspx" class="btn btn-primary" runat="server">Contáctanos</a>
+                        <p class="card-text">Deja un mensaje con el baño que te gustaria recomendar y todas sus caracteristicas.</p>
+                        <a href="https://wa.me/+5493515396331?text=Hola, quiero recomendar un baño" class="btn btn-primary" runat="server">Contáctanos</a>
                     </div>
                 </div>
                 <div class="card shadow-sm">
@@ -49,15 +47,10 @@
                         <ul class="list-unstyled">
                             <li><strong>Baños Registrados:</strong> Más de 500 en la ciudad.</li>
                             <li><strong>Usuarios Activos:</strong> 10,000+ mensuales.</li>
-                            <li><strong>Actualizaciones:</strong> Datos frescos cada semana.</li>
+                            <li><strong>Actualizaciones:</strong> Datos nuevos cada semana.</li>
                         </ul>
                     </div>
                 </div>
-            </div>
-        </div>
-        <div class="row mt-4">
-            <div class="col-12 text-center">
-                <p class="text-muted">Desarrollado con ASP.NET y Bootstrap para una experiencia fluida y accesible.</p>
             </div>
         </div>
     </main>

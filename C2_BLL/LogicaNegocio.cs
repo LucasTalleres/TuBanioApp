@@ -27,7 +27,7 @@ namespace C2_BLL
         }
         public void AgregarBaño(Baño nuevo)
         {
-            if (nuevo != null)  // Cambia a != null para agregar cuando HAY un objeto
+            if (nuevo != null)
             {
                 conexion.Agregar(nuevo);
             }
@@ -50,7 +50,7 @@ namespace C2_BLL
         }
         public List<Baño> BuscarBaño(string busca)
         {
-            if (conexion.Buscar(busca) == null)
+            if (conexion.Buscar(busca) != null)
             {
                 return conexion.Buscar(busca);
             }
