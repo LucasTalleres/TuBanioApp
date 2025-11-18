@@ -35,8 +35,8 @@ namespace C1_UI
                 string busca = txtUbicacion.Text.Trim();
                 if (!string.IsNullOrEmpty(busca))
                 {
-                    LogicaNegocios ln = new LogicaNegocios();
-                    List<Baño> resultados = ln.BuscarBaño(busca);
+                    LogicaNegocios conexion = new LogicaNegocios();
+                    List<Baño> resultados = conexion.BuscarBaño(busca);
                     if (resultados != null && resultados.Count > 0)
                     {
                         gvResultados.DataSource = resultados;
